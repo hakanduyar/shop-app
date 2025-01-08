@@ -1,26 +1,30 @@
-const productImgCss = {
-  width: "200px",
-  height: "200px",
-}
-const productInfoCss = {
-  display: "flex",
-        flexDirection: "column"
-}
+import PropTypes from "prop-types"
+import "./ProductItem.css";
 
-function ProductItem() {
+function ProductItem(props) {
+
   return (
-    <div className="produc-item">
+    <div className="product-item">
       <div className="product-image">
-        <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="product image" 
-        style={productImgCss}
-        /> 
+        <img
+          src={props.image}
+          alt="product image"
+        />
       </div>
-      <div className="product-info" style={productInfoCss}>
-        <strong className="product-title">Mens Casual Premium Slim Fit T-Shirts</strong>
-        <span className="product-price">100₺</span>
+      <div className="product-info">
+        <strong className="product-title">
+          {props.title}
+        </strong>
+        <span className="product-price">{props.price}₺</span>
       </div>
     </div>
   );
+}
+
+ProductItem.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired
 }
 
 export default ProductItem;
