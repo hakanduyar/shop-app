@@ -64,3 +64,22 @@
     background-color: #c82333;
     color: #e6e6e6;
 }
+
+/*! size classları */
+/* Small boyutlu buton */
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Medium boyutlu buton (varsayılan) */
+.btn-md {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Large boyutlu buton */
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 20px;
+}

@@ -1,17 +1,21 @@
 import Products from "./components/Products/Products";
-import Button from "./components/UI/Button"
+import Button from "./components/UI/Button";
 
 function App() {
   return (
     <div className="app">
       <h1>Hello World</h1>
-      <Button color="primary"/>
+      <Button color="success" size="lg">
+        Add
+      </Button>
       <br />
-      <Button color="success"/>
+      <Button color="danger" size="md">
+        <strong>Delete</strong>
+      </Button>
       <br />
-      <Button color="danger"/>
-      <br />
-      <Button color="warning"/>
+      <Button color="primary" size="sm">
+        Update
+      </Button>
       <Products />
     </div>
   );
