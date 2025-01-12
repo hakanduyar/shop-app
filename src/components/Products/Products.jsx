@@ -19,6 +19,7 @@ function Products() {
               image={product.image}
               title={product.title}
               price={product.price}
+              description={product.description}
               titleState={titleState}
               setTitleState={setTitleState}
             />
