@@ -2,10 +2,7 @@ import PropTypes from "prop-types";
 import "./ProductItem.css";
 import Button from "../UI/Button";
 
-function ProductItem({ setTitleState, image, title, price, description }) {
-  function handleTitleChange() {
-    setTitleState("Gömlek");
-  }
+function ProductItem({  image, title, price, description }) {
 
   return (
     <div className="product-item">
@@ -16,7 +13,7 @@ function ProductItem({ setTitleState, image, title, price, description }) {
         <strong className="product-title">{title}</strong>
         <span className="product-price">{price}₺</span>
         <p className="product-description">{description.slice(0, 60)}</p>
-        <Button color="primary" size="lg" onClick={handleTitleChange}>
+        <Button color="primary" size="lg" >
           Add To Cart
         </Button>
       </div>
@@ -29,7 +26,6 @@ ProductItem.propTypes = {
   title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
-  setTitleState: PropTypes.func,
 };
 
 export default ProductItem;
